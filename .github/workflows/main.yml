@@ -5,6 +5,8 @@ on:
 jobs:
   checkin:
     runs-on: ubuntu-latest
+    environment:
+      name:TOKEN
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python 3.9
@@ -18,7 +20,7 @@ jobs:
       run: |
         python3 ./main.py 
 env: 
-  TOKEN: ${{ TOKEN.TOKEN }}
-  GETURL: ${{ TOKEN.GETURL }}
-  HEADERS: ${{ TOKEN.HEADERS }}
-  RECEIVEID: ${{ TOKEN.RECEIVEID }}
+  TOKEN: ${{ secrets.TOKEN }}
+  GETURL: ${{ secrets.GETURL }}
+  HEADERS: ${{ secrets.HEADERS }}
+  RECEIVEID: ${{ secrets.RECEIVEID }}
