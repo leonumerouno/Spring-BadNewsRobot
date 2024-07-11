@@ -6,7 +6,7 @@ jobs:
   checkin:
     runs-on: ubuntu-latest
     environment:
-      name:TOKEN
+      name: TOKEN
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python 3.9
