@@ -10,7 +10,7 @@ jobs:
     - name: Set up Python 3.9
       uses: actions/setup-python@v3
       with:
-        python-version: 3.9.1
+        python-version: 3.9.12
     - name: requirements
       run: |
         pip3 install requests
