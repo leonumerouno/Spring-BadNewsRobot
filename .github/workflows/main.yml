@@ -1,0 +1,24 @@
+name: BadNewsRobot
+on:
+  schedule:
+    - cron: "0/10 * * * *"
+jobs:
+  checkin:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9.1
+    - name: requirements
+      run: |
+        pip3 install requests
+    - name: Checkin
+      run: |
+        python3 ./main.py 
+env: 
+  TOKEN: ${{ secrets.TOKEN }}
+  GETURL: ${{ secrets.GETURL }}
+  HEADERS: ${{ secrets.HEADERS }}
+  RECEIVEID: ${{ secrets.RECEIVEID }}
