@@ -18,7 +18,7 @@ jobs:
       run: |
         python3 ./main.py 
 env: 
-  TOKEN: ${{ secrets.TOKEN }}
-  GETURL: ${{ secrets.GETURL }}
-  HEADERS: ${{ secrets.HEADERS }}
-  RECEIVEID: ${{ secrets.RECEIVEID }}
+  TOKEN: ${{ TOKEN.TOKEN }}
+  GETURL: ${{ TOKEN.GETURL }}
+  HEADERS: ${{ TOKEN.HEADERS }}
+  RECEIVEID: ${{ TOKEN.RECEIVEID }}
