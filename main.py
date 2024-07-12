@@ -26,10 +26,11 @@ except requests.exceptions.RequestException as e:
     headers = {'Authorization': auth}
     datas = {
             "receive_id": os.environ['RECEIVEID'],
-            "content": "{\"text\":\"<at user_id=\\\\\"" + os.environ['USERID'] + "\\\">马熙翔</at> 服务器停止运行\"}",
+            "content": "{\"text\":\"<at user_id=\\\"" + os.environ['USERID'] + "\\\">马熙翔</at> 服务器停止运行\"}",
             "msg_type": "text"
         }
     response = session.post(url=posturl, data=datas, headers=headers)
     print(response.text)
+
 
 
