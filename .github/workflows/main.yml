@@ -24,3 +24,6 @@ env:
   GETURL: ${{ secrets.GETURL }}
   HEADERS: ${{ secrets.HEADERS }}
   RECEIVEID: ${{ secrets.RECEIVEID }}
+  APPID: ${{ secrets.APPID }}
+  APPSECRET: ${{ secrets.APPSECRET }}
+  USERID: ${{ secrets.USERID }}
